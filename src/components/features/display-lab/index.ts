@@ -1,0 +1,13 @@
+// src/components/features/display-lab/index.ts
+export { ComparisonSection } from './comparison-section'
+export { DisplayDemo } from './display-demo'
+export { DisplayLabPage } from './display-lab-page'
+export { FAQSection } from './faq-section'
+export { Footer } from './footer'
+export { Header } from './header'
+export { HeroSection } from './hero-section'
+export { PrincipleSection } from './principle-section'
+export { RecommendationSection } from './recommendation-section'
+export { ScenarioSection } from './scenario-section'
+export { SectionHeading } from './section-heading'
+export { SummarySection } from './summary-section'

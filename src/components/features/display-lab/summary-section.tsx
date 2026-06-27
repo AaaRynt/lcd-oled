@@ -3,8 +3,8 @@ import { summaryTags } from './data'
 
 export function SummarySection() {
   return (
-    <section className="mx-auto max-w-[1200px] px-4 pb-20 sm:px-6 lg:px-8">
-      <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-zinc-900/80 p-6 sm:p-10">
+    <section className="mx-auto max-w-300 px-4 pb-20 sm:px-6 lg:px-8">
+      <div className="relative overflow-hidden rounded-4xl border border-white/10 bg-zinc-900/80 p-6 sm:p-10">
         <div className="absolute -top-16 -right-16 h-56 w-56 rounded-full bg-fuchsia-500/15 blur-3xl" aria-hidden="true" />
         <div className="absolute -bottom-20 left-8 h-56 w-56 rounded-full bg-cyan-500/12 blur-3xl" aria-hidden="true" />
         <div className="relative">

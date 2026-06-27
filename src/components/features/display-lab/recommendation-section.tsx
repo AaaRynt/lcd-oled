@@ -88,11 +88,11 @@ export function RecommendationSection() {
   const resultClass = result?.tone === 'lcd' ? 'border-cyan-300/20 bg-cyan-300/8' : result?.tone === 'oled' ? 'border-fuchsia-300/20 bg-fuchsia-300/8' : 'border-white/10 bg-white/6'
 
   return (
-    <section id="recommendation" className="border-y border-white/8 bg-white/[0.025]">
-      <div className="mx-auto max-w-[1200px] px-4 py-20 sm:px-6 lg:px-8">
+    <section id="recommendation" className="border-y border-white/8 bg-white/2.5">
+      <div className="mx-auto max-w-300 px-4 py-20 sm:px-6 lg:px-8">
         <SectionHeading title="你可能更适合哪一种？" description="回答四个问题后，页面会给出倾向性建议。结果不会替代具体产品对比。" />
         <div className="mt-10 grid gap-6 lg:grid-cols-[1fr_0.9fr]">
-          <div className="rounded-[1.5rem] border border-white/10 bg-zinc-950/70 p-5 sm:p-6">
+          <div className="rounded-3xl border border-white/10 bg-zinc-950/70 p-5 sm:p-6">
             <div className="mb-6 flex items-center justify-between gap-4">
               <div className="flex items-center gap-3">
                 <span className="grid h-10 w-10 place-items-center rounded-xl border border-cyan-300/20 bg-cyan-300/10 text-cyan-200">
@@ -102,7 +102,7 @@ export function RecommendationSection() {
                   已回答 {answeredCount} / {recommendationQuestions.length}
                 </p>
               </div>
-              <button className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/6 px-3 py-2 text-sm text-zinc-200 transition hover:border-white/20 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300" onClick={resetAnswers} type="button">
+              <button className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/6 px-3 py-2 text-sm text-zinc-200 transition hover:border-white/20 hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300" onClick={resetAnswers} type="button">
                 <RotateCcw className="h-4 w-4" aria-hidden="true" />
                 重新选择
               </button>
@@ -119,7 +119,7 @@ export function RecommendationSection() {
                       {(['yes', 'no'] as const).map((value) => {
                         const isActive = answers[question.id] === value
                         return (
-                          <button key={value} aria-label={`${question.question}${value === 'yes' ? ' 是' : ' 否'}`} aria-pressed={isActive} className={`min-w-16 rounded-full px-4 py-2 text-sm font-medium transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300 ${isActive ? 'bg-zinc-50 text-zinc-950' : 'border border-white/10 bg-zinc-950/70 text-zinc-300 hover:border-white/20 hover:bg-white/8 hover:text-zinc-50'}`} onClick={() => setAnswer(question.id, value)} type="button">
+                          <button key={value} aria-label={`${question.question}${value === 'yes' ? ' 是' : ' 否'}`} aria-pressed={isActive} className={`min-w-16 rounded-full px-4 py-2 text-sm font-medium transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300 ${isActive ? 'bg-zinc-50 text-zinc-950' : 'border border-white/10 bg-zinc-950/70 text-zinc-300 hover:border-white/20 hover:bg-white/8 hover:text-zinc-50'}`} onClick={() => setAnswer(question.id, value)} type="button">
                             {value === 'yes' ? '是' : '否'}
                           </button>
                         )
@@ -131,7 +131,7 @@ export function RecommendationSection() {
             </div>
           </div>
 
-          <aside className={`rounded-[1.5rem] border p-6 ${resultClass}`}>
+          <aside className={`rounded-3xl border p-6 ${resultClass}`}>
             <div className="flex items-center gap-3">
               <span className="grid h-10 w-10 place-items-center rounded-xl border border-white/10 bg-zinc-950/60 text-zinc-100">
                 <CheckCircle2 className="h-5 w-5" aria-hidden="true" />
@@ -140,7 +140,7 @@ export function RecommendationSection() {
             </div>
             <p className="mt-5 text-sm leading-7 text-zinc-300">{result ? result.body : '先回答左侧问题。每一道题都可以随时修改，完成后会显示一段非绝对化的购买倾向建议。'}</p>
             {result ? (
-              <button className="mt-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-zinc-950/70 px-4 py-2 text-sm font-semibold text-zinc-100 transition hover:border-white/20 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fuchsia-300" onClick={resetAnswers} type="button">
+              <button className="mt-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-zinc-950/70 px-4 py-2 text-sm font-semibold text-zinc-100 transition hover:border-white/20 hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fuchsia-300" onClick={resetAnswers} type="button">
                 <RotateCcw className="h-4 w-4" aria-hidden="true" />
                 重新选择
               </button>

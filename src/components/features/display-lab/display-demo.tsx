@@ -47,9 +47,9 @@ export function DisplayDemo() {
   const updatePosition = (nextPosition: number) => setPosition(Math.min(88, Math.max(12, nextPosition)))
 
   return (
-    <div className="rounded-[2rem] border border-white/10 bg-white/6 p-3 shadow-2xl shadow-black/40">
+    <div className="rounded-4xl border border-white/10 bg-white/6 p-3 shadow-2xl shadow-black/40">
       <div className="relative overflow-hidden rounded-[1.45rem] border border-white/10 bg-zinc-950">
-        <div className="relative aspect-[4/3] min-h-[230px] sm:min-h-[360px]">
+        <div className="relative aspect-4/3 min-h-57.5 sm:min-h-90">
           <ScreenScene variant="oled" />
           <div className="absolute inset-0" style={{ clipPath: `inset(0 ${100 - position}% 0 0)` }}>
             <ScreenScene variant="lcd" />

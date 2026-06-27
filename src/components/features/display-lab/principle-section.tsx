@@ -55,13 +55,13 @@ function PixelDiagram({ technology }: TPixelDiagramProps) {
 
 export function PrincipleSection() {
   return (
-    <section id="principle" className="mx-auto max-w-[1200px] px-4 py-20 sm:px-6 lg:px-8">
+    <section id="principle" className="mx-auto max-w-300 px-4 py-20 sm:px-6 lg:px-8">
       <SectionHeading title="两种屏幕，是两套完全不同的发光逻辑" />
       <div className="mt-10 grid gap-5 lg:grid-cols-2">
         {principleCards.map((card) => {
           const isLcd = card.technology === 'lcd'
           return (
-            <article key={card.technology} className={`rounded-[1.5rem] border p-6 ${isLcd ? 'border-cyan-300/18 bg-cyan-300/6' : 'border-fuchsia-300/18 bg-fuchsia-300/6'}`}>
+            <article key={card.technology} className={`rounded-3xl border p-6 ${isLcd ? 'border-cyan-300/18 bg-cyan-300/6' : 'border-fuchsia-300/18 bg-fuchsia-300/6'}`}>
               <div className="mb-6 flex items-center gap-3">
                 {card.icons.map((icon) => {
                   const Icon = principleIconMap[icon]

@@ -2,7 +2,7 @@
 export function Footer() {
   return (
     <footer className="border-t border-white/10 bg-zinc-950">
-      <div className="mx-auto max-w-[1200px] px-4 py-8 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-300 px-4 py-8 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
           <div>
             <p className="text-lg font-semibold text-zinc-50">Display Lab</p>

@@ -4,11 +4,11 @@ import { SectionHeading } from './section-heading'
 
 export function ComparisonSection() {
   return (
-    <section id="comparison" className="border-y border-white/8 bg-white/[0.025]">
-      <div className="mx-auto max-w-[1200px] px-4 py-20 sm:px-6 lg:px-8">
+    <section id="comparison" className="border-y border-white/8 bg-white/2.5">
+      <div className="mx-auto max-w-300 px-4 py-20 sm:px-6 lg:px-8">
         <SectionHeading title="真正影响体验的，不只是画质" description="以下结论描述的是两类技术的常见特征。具体表现仍会受到面板型号、调校方式、亮度策略和设备设计影响。" />
 
-        <div className="mt-10 hidden overflow-hidden rounded-[1.5rem] border border-white/10 md:block">
+        <div className="mt-10 hidden overflow-hidden rounded-3xl border border-white/10 md:block">
           <table className="w-full border-collapse bg-zinc-950/70 text-left">
             <caption className="sr-only">LCD 与 OLED 核心差异对比</caption>
             <thead className="bg-white/7 text-sm text-zinc-200">

@@ -39,15 +39,15 @@ export function FAQSection() {
   }
 
   return (
-    <section className="mx-auto max-w-[1200px] px-4 py-20 sm:px-6 lg:px-8">
+    <section className="mx-auto max-w-300 px-4 py-20 sm:px-6 lg:px-8">
       <SectionHeading title="关于屏幕技术的几个常见误区" />
-      <div className="mt-10 divide-y divide-white/8 overflow-hidden rounded-[1.5rem] border border-white/10 bg-zinc-950/75">
+      <div className="mt-10 divide-y divide-white/8 overflow-hidden rounded-3xl border border-white/10 bg-zinc-950/75">
         {faqItems.map((item, index) => {
           const isOpen = openIndex === index
           return (
             <article key={item.question}>
               <h3>
-                <button aria-controls={`faq-panel-${index}`} aria-expanded={isOpen} className="focus-visible:outline-inset flex w-full items-center justify-between gap-4 px-5 py-5 text-left text-base font-semibold text-zinc-50 transition hover:bg-white/[0.035] focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan-300" id={`faq-button-${index}`} onClick={() => setOpenIndex(isOpen ? null : index)} onKeyDown={(event) => handleKeyDown(event, index)} type="button">
+                <button aria-controls={`faq-panel-${index}`} aria-expanded={isOpen} className="focus-visible:outline-inset flex w-full items-center justify-between gap-4 px-5 py-5 text-left text-base font-semibold text-zinc-50 transition hover:bg-white/[0.035] focus-visible:outline-2 focus-visible:outline-cyan-300" id={`faq-button-${index}`} onClick={() => setOpenIndex(isOpen ? null : index)} onKeyDown={(event) => handleKeyDown(event, index)} type="button">
                   <span>{item.question}</span>
                   <ChevronDown className={`h-5 w-5 shrink-0 text-zinc-400 transition-transform ${isOpen ? 'rotate-180' : ''}`} aria-hidden="true" />
                 </button>
